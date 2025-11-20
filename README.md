@@ -1,76 +1,35 @@
-\# ESMC-300m Model Predictions
+# ESMC-300m Model Predictions
 
+This repository contains scripts to run predictions using ESMC-300m based models. It supports models utilizing **Mean** or **Median** pooling strategies, as well as combined **Mean+Median** architectures.
 
+## Setup
 
-This repository contains scripts to run predictions using ESMC-300m based models. It supports models utilizing \*\*Mean\*\* or \*\*Median\*\* pooling strategies.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-name>
+   ```
 
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-
-\## Setup
-
-
-
-1\. \*\*Clone the repository:\*\*
-
-&nbsp;  ```bash
-
-&nbsp;  git clone <your-repo-url>
-
-&nbsp;  cd <your-repo-name>
-
-&nbsp;  ```
-
-2\. \*\*Install dependencies:\*\*
-
-&nbsp;  ```bash
-
-&nbsp;  pip install -r requirements.txt
-
-&nbsp;  ```
-
-
-
-\*\*Usage\*\*
+## Usage
 
 Place your input FASTA file in the directory (or anywhere accessible).
 
 ```bash
-
-python predict.py \\
-
-&nbsp; --fasta inputs.fasta \\
-
-&nbsp; --output results.csv \\
-
-&nbsp; --weights\_dir weights
-
+python predict.py \
+  --fasta inputs.fasta \
+  --output results.csv \
+  --weights_dir weights
 ```
 
+### Arguments
 
-
-\*\*Arguments\*\*
-
-```bash
-
---fasta: Path to the sequences file.
-
---weights\_dir: Folder containing .pt model files (default: weights/).
-
---output: Name of the result file.
-
---batch\_size: Batch size for ESMC embedding (adjust based on GPU memory).
-
-
-
-```
-
-
-
-
-
-
-
-
-
-
-
+- `--fasta`: Path to the sequences file.
+- `--weights_dir`: Folder containing `.pth` model files (default: `weights/`).
+- `--output`: Name of the result file (CSV).
+- `--batch_size`: Batch size for ESMC embedding (adjust based on GPU memory).
+- `--chunk_size`: Number of sequences to process in memory at once (default: 100).
