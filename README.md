@@ -6,8 +6,8 @@ This repository contains scripts to run predictions using ESMC-300m based models
 
 1. **Clone the repository:**
    ```bash
-   git clone (https://github.com/yoel-marcu/esmc-predictor.git)
-   cd (https://github.com/yoel-marcu/esmc-predictor.git)
+   git clone https://github.com/yoel-marcu/esmc-predictor.git
+   cd esmc-predictor
    ```
 
 2. **Install dependencies:**
