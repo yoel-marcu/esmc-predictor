@@ -1,0 +1,5 @@
+torch
+pandas
+numpy
+# The Evolutionary Scale Modeling library
+git+https://github.com/evolutionaryscale/esm.git

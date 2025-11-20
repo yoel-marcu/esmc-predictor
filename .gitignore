@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# Virtual environments (if you have one inside)
+venv/
+.env/
+
+# Optional: If your input fasta files are huge, ignore them too
+*.fasta
